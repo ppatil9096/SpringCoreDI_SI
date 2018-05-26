@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="siPrimitiveAndString"
+		class="com.pravin.spring.tutorial.bean.EmployeeForSIPrimitiveString">
+		<property name="id" value="20"></property>
+		<property name="name" value="Pravin"></property>
+	</bean>
+
+	<bean id="siDependentAddrressObj"
+		class="com.pravin.spring.tutorial.bean.AddressForEIDependentObj">
+		<property name="city" value="Pune"></property>
+		<property name="state" value="MH"></property>
+		<property name="country" value="INDIA"></property>
+	</bean>
+
+	<bean id="siDpendentEmployeeObj"
+		class="com.pravin.spring.tutorial.bean.EmployeeForSIDependentObj">
+		<property name="id" value="1"></property>
+		<property name="name" value="Pravin"></property>
+		<property name="addressForEIDependentObj" ref="siDependentAddrressObj"></property>
+	</bean>
+
+	<bean id="siCollectionStringObj"
+		class="com.pravin.spring.tutorial.bean.QuestionForSICollectionListString">
+		<property name="id" value="1"></property>
+		<property name="name" value="What is Spring?"></property>
+		<property name="answers">
+			<list>
+				<value>Spring is FrameWork</value>
+				<value>Spring is java based framework</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="siQuestionNonStringCollectioListObj"
+		class="com.pravin.spring.tutorial.bean.QuestionForSICollectionListNonString">
+		<property name="id" value="1"></property>
+		<property name="question" value="What is Spring?"></property>
+		<property name="answers">
+			<list>
+				<ref bean="siAnswerForNonStringCollectionListObj1" />
+				<ref bean="siAnswerForNonStringCollectionListObj2" />
+			</list>
+		</property>
+	</bean>
+	<bean id="siAnswerForNonStringCollectionListObj1"
+		class="com.pravin.spring.tutorial.bean.AnswerForSICollectionNonString">
+		<property name="answerGivenBy" value="Pravin"></property>
+		<property name="answerIs" value="Spring is framework"></property>
+	</bean>
+	<bean id="siAnswerForNonStringCollectionListObj2"
+		class="com.pravin.spring.tutorial.bean.AnswerForSICollectionNonString">
+		<property name="answerGivenBy" value="Akshay"></property>
+		<property name="answerIs" value="Spring is Java based framework"></property>
+	</bean>
+</beans>  
