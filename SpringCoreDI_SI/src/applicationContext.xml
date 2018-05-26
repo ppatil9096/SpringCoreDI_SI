@@ -68,4 +68,38 @@
 			</map>
 		</property>
 	</bean>
+
+	<bean id="siAnswer1"
+		class="com.pravin.spring.tutorial.bean.AnswerForSIMapCollectionNonString">
+		<property name="answer" value="Spring is java based Framework"></property>
+		<property name="postDate" value="25-MAY-2018"></property>
+	</bean>
+	<bean id="siAnswer2"
+		class="com.pravin.spring.tutorial.bean.AnswerForSIMapCollectionNonString">
+		<property name="answer" value="Spring is Framework"></property>
+		<property name="postDate" value="26-MAY-2018"></property>
+	</bean>
+
+	<bean id="siUser1"
+		class="com.pravin.spring.tutorial.bean.UserForSIMapCollectionNonString">
+		<property name="name" value="Pravin"></property>
+		<property name="email" value="Pravin@mail.com"></property>
+	</bean>
+	<bean id="siUser2"
+		class="com.pravin.spring.tutorial.bean.UserForSIMapCollectionNonString">
+		<property name="name" value="Akshay"></property>
+		<property name="email" value="Akshay@mail.com"></property>
+	</bean>
+
+	<bean id="siQuestionNonStringCollectionMap"
+		class="com.pravin.spring.tutorial.bean.QuestionForSICollectionMapNonString">
+		<property name="id" value="1"></property>
+		<property name="question" value="What is Spring?"></property>
+		<property name="answers">
+			<map>
+				<entry key-ref="siAnswer1" value-ref="siUser1"></entry>
+				<entry key-ref="siAnswer2" value-ref="siUser2"></entry>
+			</map>
+		</property>
+	</bean>
 </beans>  
