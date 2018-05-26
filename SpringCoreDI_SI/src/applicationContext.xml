@@ -56,4 +56,16 @@
 		<property name="answerGivenBy" value="Akshay"></property>
 		<property name="answerIs" value="Spring is Java based framework"></property>
 	</bean>
+	<bean id="siQuestionForStringCollectionMapObj"
+		class="com.pravin.spring.tutorial.bean.QuestionForSICollectionMapString">
+		<property name="id" value="1"></property>
+		<property name="question" value="What is Spring?"></property>
+		<property name="answers">
+			<map>
+				<entry key="Spring is framework" value="Pravin">
+				</entry>
+				<entry key="Spring is java based Framework" value="Akshay"></entry>
+			</map>
+		</property>
+	</bean>
 </beans>  
