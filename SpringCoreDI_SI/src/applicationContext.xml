@@ -1,32 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="siPrimitiveAndString"
+	<bean
+		id="siPrimitiveAndString"
 		class="com.pravin.spring.tutorial.bean.EmployeeForSIPrimitiveString">
-		<property name="id" value="20"></property>
-		<property name="name" value="Pravin"></property>
+		<property
+			name="id"
+			value="20"></property>
+		<property
+			name="name"
+			value="Pravin"></property>
 	</bean>
 
-	<bean id="siDependentAddrressObj"
+	<bean
+		id="siDependentAddrressObj"
 		class="com.pravin.spring.tutorial.bean.AddressForEIDependentObj">
-		<property name="city" value="Pune"></property>
-		<property name="state" value="MH"></property>
-		<property name="country" value="INDIA"></property>
+		<property
+			name="city"
+			value="Pune"></property>
+		<property
+			name="state"
+			value="MH"></property>
+		<property
+			name="country"
+			value="INDIA"></property>
 	</bean>
 
-	<bean id="siDpendentEmployeeObj"
+	<bean
+		id="siDpendentEmployeeObj"
 		class="com.pravin.spring.tutorial.bean.EmployeeForSIDependentObj">
-		<property name="id" value="1"></property>
-		<property name="name" value="Pravin"></property>
-		<property name="addressForEIDependentObj" ref="siDependentAddrressObj"></property>
+		<property
+			name="id"
+			value="1"></property>
+		<property
+			name="name"
+			value="Pravin"></property>
+		<property
+			name="addressForEIDependentObj"
+			ref="siDependentAddrressObj"></property>
 	</bean>
 
-	<bean id="siCollectionStringObj"
+	<bean
+		id="siCollectionStringObj"
 		class="com.pravin.spring.tutorial.bean.QuestionForSICollectionListString">
-		<property name="id" value="1"></property>
-		<property name="name" value="What is Spring?"></property>
+		<property
+			name="id"
+			value="1"></property>
+		<property
+			name="name"
+			value="What is Spring?"></property>
 		<property name="answers">
 			<list>
 				<value>Spring is FrameWork</value>
@@ -35,10 +60,15 @@
 		</property>
 	</bean>
 
-	<bean id="siQuestionNonStringCollectioListObj"
+	<bean
+		id="siQuestionNonStringCollectioListObj"
 		class="com.pravin.spring.tutorial.bean.QuestionForSICollectionListNonString">
-		<property name="id" value="1"></property>
-		<property name="question" value="What is Spring?"></property>
+		<property
+			name="id"
+			value="1"></property>
+		<property
+			name="question"
+			value="What is Spring?"></property>
 		<property name="answers">
 			<list>
 				<ref bean="siAnswerForNonStringCollectionListObj1" />
@@ -46,60 +76,118 @@
 			</list>
 		</property>
 	</bean>
-	<bean id="siAnswerForNonStringCollectionListObj1"
+	<bean
+		id="siAnswerForNonStringCollectionListObj1"
 		class="com.pravin.spring.tutorial.bean.AnswerForSICollectionNonString">
-		<property name="answerGivenBy" value="Pravin"></property>
-		<property name="answerIs" value="Spring is framework"></property>
+		<property
+			name="answerGivenBy"
+			value="Pravin"></property>
+		<property
+			name="answerIs"
+			value="Spring is framework"></property>
 	</bean>
-	<bean id="siAnswerForNonStringCollectionListObj2"
+	<bean
+		id="siAnswerForNonStringCollectionListObj2"
 		class="com.pravin.spring.tutorial.bean.AnswerForSICollectionNonString">
-		<property name="answerGivenBy" value="Akshay"></property>
-		<property name="answerIs" value="Spring is Java based framework"></property>
+		<property
+			name="answerGivenBy"
+			value="Akshay"></property>
+		<property
+			name="answerIs"
+			value="Spring is Java based framework"></property>
 	</bean>
-	<bean id="siQuestionForStringCollectionMapObj"
+	<bean
+		id="siQuestionForStringCollectionMapObj"
 		class="com.pravin.spring.tutorial.bean.QuestionForSICollectionMapString">
-		<property name="id" value="1"></property>
-		<property name="question" value="What is Spring?"></property>
+		<property
+			name="id"
+			value="1"></property>
+		<property
+			name="question"
+			value="What is Spring?"></property>
 		<property name="answers">
 			<map>
-				<entry key="Spring is framework" value="Pravin">
+				<entry
+					key="Spring is framework"
+					value="Pravin">
 				</entry>
-				<entry key="Spring is java based Framework" value="Akshay"></entry>
+				<entry
+					key="Spring is java based Framework"
+					value="Akshay"></entry>
 			</map>
 		</property>
 	</bean>
 
-	<bean id="siAnswer1"
+	<bean
+		id="siAnswer1"
 		class="com.pravin.spring.tutorial.bean.AnswerForSIMapCollectionNonString">
-		<property name="answer" value="Spring is java based Framework"></property>
-		<property name="postDate" value="25-MAY-2018"></property>
+		<property
+			name="answer"
+			value="Spring is java based Framework"></property>
+		<property
+			name="postDate"
+			value="25-MAY-2018"></property>
 	</bean>
-	<bean id="siAnswer2"
+	<bean
+		id="siAnswer2"
 		class="com.pravin.spring.tutorial.bean.AnswerForSIMapCollectionNonString">
-		<property name="answer" value="Spring is Framework"></property>
-		<property name="postDate" value="26-MAY-2018"></property>
+		<property
+			name="answer"
+			value="Spring is Framework"></property>
+		<property
+			name="postDate"
+			value="26-MAY-2018"></property>
 	</bean>
 
-	<bean id="siUser1"
+	<bean
+		id="siUser1"
 		class="com.pravin.spring.tutorial.bean.UserForSIMapCollectionNonString">
-		<property name="name" value="Pravin"></property>
-		<property name="email" value="Pravin@mail.com"></property>
+		<property
+			name="name"
+			value="Pravin"></property>
+		<property
+			name="email"
+			value="Pravin@mail.com"></property>
 	</bean>
-	<bean id="siUser2"
+	<bean
+		id="siUser2"
 		class="com.pravin.spring.tutorial.bean.UserForSIMapCollectionNonString">
-		<property name="name" value="Akshay"></property>
-		<property name="email" value="Akshay@mail.com"></property>
+		<property
+			name="name"
+			value="Akshay"></property>
+		<property
+			name="email"
+			value="Akshay@mail.com"></property>
 	</bean>
 
-	<bean id="siQuestionNonStringCollectionMap"
+	<bean
+		id="siQuestionNonStringCollectionMap"
 		class="com.pravin.spring.tutorial.bean.QuestionForSICollectionMapNonString">
-		<property name="id" value="1"></property>
-		<property name="question" value="What is Spring?"></property>
+		<property
+			name="id"
+			value="1"></property>
+		<property
+			name="question"
+			value="What is Spring?"></property>
 		<property name="answers">
 			<map>
-				<entry key-ref="siAnswer1" value-ref="siUser1"></entry>
-				<entry key-ref="siAnswer2" value-ref="siUser2"></entry>
+				<entry
+					key-ref="siAnswer1"
+					value-ref="siUser1"></entry>
+				<entry
+					key-ref="siAnswer2"
+					value-ref="siUser2"></entry>
 			</map>
 		</property>
+	</bean>
+
+	<bean
+		id="b_Autowiring"
+		class="com.pravin.spring.tutorial.bean.B_Autowiring">
+	</bean>
+	<bean
+		id="aAutowiring"
+		class="com.pravin.spring.tutorial.bean.A_Autowiring"
+		autowire="byName">
 	</bean>
 </beans>  
