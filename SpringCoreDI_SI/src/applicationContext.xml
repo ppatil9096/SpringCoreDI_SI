@@ -180,14 +180,47 @@
 			</map>
 		</property>
 	</bean>
+	<!-- autowiring byName -->
+	<!-- <bean -->
+	<!-- id="b_Autowiring" -->
+	<!-- class="com.pravin.spring.tutorial.bean.B_Autowiring"> -->
+	<!-- </bean> -->
+	<!-- <bean -->
+	<!-- id="aAutowiringName" -->
+	<!-- class="com.pravin.spring.tutorial.bean.A_Autowiring" -->
+	<!-- autowire="byName"> -->
+	<!-- </bean> -->
 
+	<!-- autowiring byType -->
+	<!-- <bean -->
+	<!-- id="bAutowiring" -->
+	<!-- class="com.pravin.spring.tutorial.bean.B_Autowiring"> -->
+	<!-- </bean> -->
+	<!-- <bean -->
+	<!-- id="aAutowiringType" -->
+	<!-- class="com.pravin.spring.tutorial.bean.A_Autowiring" -->
+	<!-- autowire="byType"> -->
+	<!-- </bean> -->
+
+	<!-- constructor autowiring -->
+	<!-- <bean -->
+	<!-- id="b_Autowiring" -->
+	<!-- class="com.pravin.spring.tutorial.bean.B_Autowiring"> -->
+	<!-- </bean> -->
+	<!-- <bean -->
+	<!-- id="aAutowiringConstructor" -->
+	<!-- class="com.pravin.spring.tutorial.bean.A_Autowiring" -->
+	<!-- autowire="constructor"> -->
+	<!-- </bean> -->
+
+	<!-- no autowiring -->
 	<bean
-		id="b_Autowiring"
+		id="bAutowiring"
 		class="com.pravin.spring.tutorial.bean.B_Autowiring">
 	</bean>
 	<bean
-		id="aAutowiring"
+		id="aAutowiringNo"
 		class="com.pravin.spring.tutorial.bean.A_Autowiring"
-		autowire="byName">
+		autowire="no">
 	</bean>
 </beans>  
